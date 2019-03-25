@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <AzureFunctionsVersion></AzureFunctionsVersion>
-    <RootNamespace>generic_character_sheet_azure</RootNamespace>
+    <RootNamespace>gcsAzure</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="1.0.24" />
