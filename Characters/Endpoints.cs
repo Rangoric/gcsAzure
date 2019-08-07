@@ -53,6 +53,7 @@ namespace gcsAzure
 
       var data = new Character
       {
+        payload = requestBody,
         id = id,
         ownerID = actorProfile.ID,
         lastModified = DateTime.UtcNow.Ticks
