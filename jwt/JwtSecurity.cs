@@ -90,8 +90,15 @@ namespace Utilities.Jwt
     }
     public static async Task<(bool, ClaimsPrincipal, ActorProfile)> IsValid(HttpRequest request)
     {
-      var (claims, actorProfile) = await Authorize(request);
-      return (true, claims, actorProfile);
+      try
+      {
+        var (claims, actorProfile) = await Authorize(request);
+        return (true, claims, actorProfile);
+      }
+      catch
+      {
+        return (false, null, null);
+      }
     }
     public static async Task<(bool, ClaimsPrincipal, ActorProfile)> IsValid(HttpRequest request, string[] roles)
     {
